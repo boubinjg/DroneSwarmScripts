@@ -1,7 +1,7 @@
 import os
 import socket
 
-PORT = 45455 #Standard
+PORT = 45453 #Standard
 HOST = ''
 CoAPCommand = ''
 CoAPAddr = ''
@@ -14,7 +14,7 @@ while 1:
         conn, addr = s.accept();
         print addr[0] + ':' + str(addr[1]);
         command = conn.recv(1024).split(',');
-        print(command[0])
+        print(command)
         if command[0] == "break":
             break;
         CoAPAddr = command[0];
